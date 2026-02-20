@@ -1,0 +1,11 @@
+{
+  "total_errors": 69,
+  "false_positives": 40,
+  "false_negatives": 29,
+  "test_samples": 1439,
+  "multi_sentence_percentage": 31.619179986101457,
+  "expected_multi_sentence_errors": 21.817234190410005,
+  "verdict": "PROCEED_WITH_CAUTION",
+  "expected_improvement_conservative": "+0.45%",
+  "expected_improvement_optimistic": "+1.06%"
+}
