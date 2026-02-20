@@ -42,8 +42,14 @@ FUSION:
 
 ### 1. Clone Repository
 ```bash
-cd HinglishSarc
+git clone https://github.com/AnsariUsaid/HinglishSarc-Emotion-Trajectory.git
+cd HinglishSarc-Emotion-Trajectory
 ```
+
+### 1.5. Download Missing Dataset
+The emotion dataset (`.xlsx`) is excluded from git due to size. Download it from Kaggle:
+- URL: https://www.kaggle.com/datasets/amaan00290/hinglish-sarcasm-and-emotion-detection-dataset2025
+- Save `emotion_hinghlish_dataset.xlsx` to `data/raw/`
 
 ### 2. Create Virtual Environment
 ```bash
