@@ -1,55 +1,61 @@
 # HinglishSarc - Implementation Progress
 
 ## ✅ Week 1, Day 1-2: Environment Setup (COMPLETED)
+- [x] Python 3.13.7 environment, PyTorch 2.10.0, Transformers 5.2.0
+- [x] Project structure and datasets loaded
+- [x] EDA completed with 3 visualizations
+- [x] Pushed to GitHub
+
+## ✅ Week 1, Day 3-4: Data Preprocessing (COMPLETED)
 
 ### Completed Tasks
-- [x] Python 3.13.7 environment set up
-- [x] Virtual environment created (`venv/`)
-- [x] Core packages installed:
-  - PyTorch 2.10.0
-  - Transformers 5.2.0
-  - Pandas 3.0.1
-  - NumPy 2.3.5
-  - Scikit-learn 1.8.0
-  - Matplotlib, Seaborn, Emoji, Jupyter
-- [x] Project structure created and datasets loaded
-- [x] EDA notebook created and executed successfully
-- [x] Generated visualizations:
-  - `outputs/figures/sarcasm_label_distribution.png`
-  - `outputs/figures/sarcasm_text_length.png`
-  - `outputs/figures/emotion_distribution.png`
+- [x] Implemented HinglishPreprocessor class with configurable options
+- [x] Text normalization: lowercase, URL removal, mention removal
+- [x] Whitespace normalization and emoji preservation
+- [x] Sentence splitting for intra-text trajectory modeling
+- [x] Created stratified train/val/test splits (70/15/15)
+- [x] Saved preprocessed datasets to data/processed/
+- [x] Generated 2 new visualizations
 
-### Key Findings from EDA
-1. **Sarcasm Dataset (9,593 samples):**
-   - 57.8% sarcastic, 42.2% non-sarcastic (mild imbalance)
-   - Avg text length: ~130 characters
-   - Avg word count: ~20 words
-   - Low emoji usage across both classes
-   - Minimal Devanagari script (mostly romanized Hinglish)
+### Preprocessing Configuration
+- **Lowercase:** Yes
+- **Remove URLs:** Yes
+- **Remove mentions:** Yes (@username)
+- **Remove hashtags:** No (kept as sarcasm indicators)
+- **Preserve emojis:** Yes (emotional information)
+- **Remove punctuation:** No (needed for sentence splitting)
 
-2. **Emotion Dataset (25,688 samples):**
-   - 10 emotion classes (fairly balanced)
-   - Top 3: admiration, disapproval, neutral (~3000 each)
-   - Will be used to train emotion classifier
+### Dataset Splits
+| Split | Samples | Sarcastic | Non-Sarcastic | Sarcasm % |
+|-------|---------|-----------|---------------|-----------|
+| Train | 6,715   | 3,881     | 2,834         | 57.80%    |
+| Val   | 1,439   | 832       | 607           | 57.82%    |
+| Test  | 1,439   | 831       | 608           | 57.75%    |
+| **Total** | **9,593** | **5,544** | **4,049** | **57.79%** |
 
-3. **MLT Dataset (30,000 samples):**
-   - Perfectly balanced (3,000 per emotion)
-   - Backup data for emotion modeling
+### Key Statistics
+- Average sentences per text: ~1.5 (range: 1-10+)
+- Stratification successful: sarcasm ratio maintained across splits
+- Average text length after cleaning: ~110 characters
+- Average word count: ~18 words per text
 
 ### Files Created
-- `requirements.txt` - Python dependencies
-- `notebooks/01_EDA.ipynb` - Exploratory data analysis (executed)
-- `README.md` - Project documentation
-- `PROGRESS.md` - This file
+- `scripts/preprocess_utils.py` - Preprocessing utilities
+- `notebooks/02_Preprocessing.ipynb` - Preprocessing notebook (executed)
+- `data/processed/train.csv` - Training set
+- `data/processed/val.csv` - Validation set
+- `data/processed/test.csv` - Test set
+- `outputs/figures/preprocessing_analysis.png`
+- `outputs/figures/train_val_test_distribution.png`
 
 ### Next Steps
-**Day 3-4: Data Preprocessing**
-- [ ] Implement text normalization pipeline
-- [ ] Create train/val/test splits (70/15/15)
-- [ ] Handle special characters, emojis, URLs
-- [ ] Save preprocessed data
+**Day 5-7: Baseline Models**
+- [ ] Baseline 1: mBERT fine-tune (target ~75% F1)
+- [ ] Baseline 2: BiLSTM + word embeddings (target ~70-72% F1)
+- [ ] Document results and establish performance benchmarks
+- [ ] Create baseline comparison visualizations
 
 ---
 
-**Status:** Day 1-2 COMPLETE ✅ | Moving to Day 3-4
+**Status:** Day 3-4 COMPLETE ✅ | Moving to Day 5-7
 **Last Updated:** February 20, 2026
