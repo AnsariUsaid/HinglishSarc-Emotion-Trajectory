@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+notebooks/.ipynb_checkpoints/
+notebooks/*_executed.ipynb
+
+# PyCharm
+.idea/
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Model checkpoints (too large for git)
+models/checkpoints/*.pt
+models/checkpoints/*.pth
+models/emotion_classifier/*.pt
+models/emotion_classifier/*.pth
+models/final_model/*.pt
+models/final_model/*.pth
+
+# Large data files (use Git LFS or separate storage)
+*.xlsx
+data/raw/*.xlsx
+data/processed/*.pkl
+data/processed/*.pickle
+
+# Logs
+*.log
+logs/
+outputs/logs/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Weights & Biases
+wandb/
+
+# Environment variables
+.env
+.env.local
+
+# Cache
+.cache/
+*.cache

@@ -1,0 +1,34 @@
+# Deep Learning
+torch>=2.0.0
+transformers>=4.30.0
+datasets>=2.14.0
+
+# IndicNLP and NLP tools
+indicnlp-corpus>=0.1.0
+indic-nlp-library>=0.91
+sentencepiece>=0.1.99
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+openpyxl>=3.1.0
+scikit-learn>=1.3.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.14.0
+
+# Experiment Tracking
+wandb>=0.15.0
+tensorboard>=2.13.0
+
+# Utilities
+tqdm>=4.65.0
+python-dotenv>=1.0.0
+emoji>=2.5.0
+langdetect>=1.0.9
+
+# Jupyter
+jupyter>=1.0.0
+ipykernel>=6.23.0
